@@ -133,7 +133,16 @@ const ChosenTableContainer = () => {
                     </div>
                 </div>
                 <div className={show ? "inline transition-all" : "fixed -top-full transition-all"}>
-                    <ManagableTable tableColumns={Columns} tableData={searchedData.length > 0 ? searchedData : tableData} />
+                    <ManagableTable tableColumns={Columns} tableData={searchedData.length > 0 ? searchedData.map((i) => ({
+                        key: i.insCode,
+                        lVal30: i.lVal30,
+                        hEven: hEvenhandler(i.hEven),
+                        xDrNivJIdx004: numberCharacterHandler(i.xDrNivJIdx004),
+                        indexChange: SymbolHandler(i.indexChange),
+                        xVarIdxJRfV: PercentRounder(i.xVarIdxJRfV),
+                        xPbNivJIdx004: numberCharacterHandler(i.xPbNivJIdx004),
+                        xPhNivJIdx004: numberCharacterHandler(i.xPhNivJIdx004),
+                    })) : tableData} />
                 </div>
             </div>
         </>
