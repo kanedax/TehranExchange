@@ -124,7 +124,7 @@ const MostTransitionContainer = () => {
         )
         setSearchedData(response);
     };
-    console.log(searchedData);
+
     return (
         <>
             <div>

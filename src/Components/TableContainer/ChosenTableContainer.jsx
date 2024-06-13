@@ -105,7 +105,6 @@ const ChosenTableContainer = () => {
         xPbNivJIdx004: numberCharacterHandler(i.xPbNivJIdx004),
         xPhNivJIdx004: numberCharacterHandler(i.xPhNivJIdx004),
     }))
-
     const handleSearch = (e) => {
         const searchedItem = e.target.value;
         const response = chosenTableData.filter((item) =>
